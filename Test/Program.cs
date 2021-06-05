@@ -6,10 +6,19 @@ using System.Threading.Tasks;
 
 namespace Test
 {
-    class Program
+    public class Program
     {
+        public static CitizensDB db;
+
         static void Main(string[] args)
         {
+            db = new CitizensDB(); 
+
+            
+
         }
+
+
+
     }
 }

@@ -9,26 +9,37 @@
 
 <h3>Количество записей в базе данных: @Model.Citizens.Count()</h3>
 
-@*<div class="row">
+<table class="table td">
 
-    <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card m-3 ">
-            <div class="card-header text-center cardHeaderStyle">
-                <h3>Name</h3>
-            </div>
+    <tr style="font-weight:bold;">
+        <td>Номер </td>
+        <td>Имя </td>
+        <td>Фамилия </td>
+        <td>Отчество </td>
+        <td>СНИЛС </td>
+        <td>ИНН </td>
+        <td>Дата рождения </td>
+        <td>Дата смерти </td>
+    </tr>
+    @foreach (var item in Model.Citizens)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Surnames</td>
+            <td>@item.Patronymic</td>
+            <td>@item.SNILS</td>
+            <td>@item.INN</td>
+            <td>@item.DateOfBirth</td>
+            <td>@item.DateOfDeath</td>
+        </tr>
 
-            <div class="text-center cardBodyStyle">
-                <img class="card-img-top imageThumbnail" src="photoPath" asp-append-version="true" />
-            </div>
+    }
 
-            <div class="card-footer text-center">
-                <a asp-page="/Employees/Details" asp-route-Id="item.Id" class="btn btn-success m-1 buttonShadow">View</a>
-                <a asp-page="/Employees/Edit" asp-route-Id="item.Id" class="btn btn-primary m-1 buttonShadow">Edit</a>
-                <a href="#" class="btn btn-danger m-1 buttonShadow">Delete</a>
-            </div>
 
-        </div>
 
-    </div>
 
-</div>*@
+
+
+
+</table>

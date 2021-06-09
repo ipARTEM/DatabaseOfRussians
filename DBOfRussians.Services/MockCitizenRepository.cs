@@ -17,23 +17,23 @@ namespace DBOfRussians.Services
             {
                 new Citizen()
                 {
-                   Id = 0, Name = "Иван", Surnames = "Иванов", Patronymic = "Иванович", SNILS = 12345678901, INN = 123456789012, DateOfBirth= DateTime.Now
+                   Id = 1, Name = "Иван", Surnames = "Иванов", Patronymic = "Иванович", SNILS = 12345678901, INN = 123456789012, DateOfBirth= DateTime.Now
                 },
                 new Citizen()
                 {
-                   Id = 1, Name = "Петр", Surnames = "Петров", Patronymic = "Петрович", SNILS = 12345678902, INN = 123456789013, DateOfBirth= DateTime.Now
+                   Id = 2, Name = "Петр", Surnames = "Петров", Patronymic = "Петрович", SNILS = 12345678902, INN = 123456789013, DateOfBirth= DateTime.Now
                 },
                 new Citizen()
                 {
-                   Id = 2, Name = "Александр", Surnames = "Александров", Patronymic = "Александрович", SNILS = 12345678903, INN = 123456789015, DateOfBirth= DateTime.Now
+                   Id = 3, Name = "Александр", Surnames = "Александров", Patronymic = "Александрович", SNILS = 12345678903, INN = 123456789015, DateOfBirth= DateTime.Now
                 },
                 new Citizen()
                 {
-                   Id = 3, Name = "Артем", Surnames = "Артемов", Patronymic = "Артемович", SNILS = 12345678904, INN = 123456789016, DateOfBirth= DateTime.Now
+                   Id = 4, Name = "Артем", Surnames = "Артемов", Patronymic = "Артемович", SNILS = 12345678904, INN = 123456789016, DateOfBirth= DateTime.Now
                 },
                 new Citizen()
                 {
-                   Id = 4, Name = "Михаил", Surnames = "Михайлов", Patronymic = "Михайлович", SNILS = 12345678905, INN = 123456789017, DateOfBirth= DateTime.Now
+                   Id = 5, Name = "Михаил", Surnames = "Михайлов", Patronymic = "Михайлович", SNILS = 12345678905, INN = 123456789017, DateOfBirth= DateTime.Now
                 }
 
             };

@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBOfRussians", "DBOfRussians\DBOfRussians.csproj", "{3015664F-47C1-4782-BA30-4A35C4E7EC69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBOfRussians.Models", "DBOfRussians.Models\DBOfRussians.Models.csproj", "{71ECD240-CC3A-42EE-ADC1-DECB73FEB000}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBOfRussians.Models", "DBOfRussians.Models\DBOfRussians.Models.csproj", "{71ECD240-CC3A-42EE-ADC1-DECB73FEB000}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBOfRussians.Services", "DBOfRussians.Services\DBOfRussians.Services.csproj", "{D0AC736A-C55F-4DD3-82E3-333C3966690E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBOfRussians.Services", "DBOfRussians.Services\DBOfRussians.Services.csproj", "{D0AC736A-C55F-4DD3-82E3-333C3966690E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

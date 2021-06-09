@@ -1,0 +1,34 @@
+﻿@page
+@model DBOfRussians.Pages.Citizens.CitizensModel
+@{
+    ViewData["Title"] = "База данных";
+
+}
+
+<h1>База данных</h1>
+
+<h3>Количество записей в базе данных: @Model.Citizens.Count()</h3>
+
+@*<div class="row">
+
+    <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card m-3 ">
+            <div class="card-header text-center cardHeaderStyle">
+                <h3>Name</h3>
+            </div>
+
+            <div class="text-center cardBodyStyle">
+                <img class="card-img-top imageThumbnail" src="photoPath" asp-append-version="true" />
+            </div>
+
+            <div class="card-footer text-center">
+                <a asp-page="/Employees/Details" asp-route-Id="item.Id" class="btn btn-success m-1 buttonShadow">View</a>
+                <a asp-page="/Employees/Edit" asp-route-Id="item.Id" class="btn btn-primary m-1 buttonShadow">Edit</a>
+                <a href="#" class="btn btn-danger m-1 buttonShadow">Delete</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>*@

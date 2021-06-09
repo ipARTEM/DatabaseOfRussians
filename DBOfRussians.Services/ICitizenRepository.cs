@@ -5,10 +5,12 @@ using DBOfRussians.Models;
 
 namespace DBOfRussians.Services
 {
-    public interface IСitizenRepository
+    public interface ICitizenRepository
     {
         IEnumerable<Citizen> GetAllCitizen();
 
         Citizen GetCitizen(int id);
+
+        Citizen Update(Citizen updateCitizen);
     }
 }

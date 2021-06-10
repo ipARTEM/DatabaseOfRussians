@@ -4,18 +4,17 @@
     ViewData["Title"] = "Редактировать";
 
 }
-<h1>Редактировать данные гражданина</h1>
+<h1 class="text-center" >Редактирование данных гражданина</h1>
+<form method="post" enctype="multipart/form-data">
 
 
-
-
-<div class="row">
+<div class="row text-center ">
     <h4>
-        <label>Введите id гражданина:    </label>
+        <label >Введите id гражданина:    </label>
     </h4>
-    <input asp-for="Citizen.Id " />
+    <input  asp-for="Citizen.Id " />
 
-    <button class="btn btn-success">Выбрать</button>
+    <a asp-page="/Citizens/Edit"  class="btn btn-success ">Выбрать</a>
 
 
 </div>
@@ -24,50 +23,52 @@
 
 
         <tr>
-            <td>Id: </td>
-            <td><input asp-for="Citizen.Id" placeholder="@Model.Citizen.Id "/></td>
+            <td class="text-right">Id: </td>
+            <td>@Model.Citizen.Id</td>
         </tr>
 
         <tr>
-            <td>Имя: </td>
+            <td class="text-right">Имя: </td>
             <td><input asp-for="Citizen.Name" placeholder="@Model.Citizen.Name " /></td>
         </tr>
 
         <tr>
-            <td>Фамилия: </td>
+            <td class="text-right">Фамилия: </td>
             <td><input asp-for="Citizen.Surnames" placeholder="@Model.Citizen.Surnames " /></td>
         </tr>
 
         <tr>
 
-            <td>Отчество: </td>
+            <td class="text-right">Отчество: </td>
             <td><input asp-for="Citizen.Patronymic" placeholder="@Model.Citizen.Patronymic " /></td>
         </tr>
 
         <tr>
 
-            <td>СНИЛС: </td>
+            <td class="text-right">СНИЛС: </td>
             <td><input asp-for="Citizen.SNILS" placeholder="@Model.Citizen.SNILS " /></td>
         </tr>
 
         <tr>
 
-            <td>ИНН: </td>
+            <td class="text-right">ИНН: </td>
             <td><input asp-for="Citizen.INN" placeholder="@Model.Citizen.INN " /></td>
         </tr>
 
         <tr>
-            <td>Дата рождения: </td>
+            <td class="text-right">Дата рождения: </td>
             <td><input asp-for="Citizen.DateOfBirth" placeholder="@Model.Citizen.DateOfBirth " /></td>
         </tr>
 
         <tr>
-            <td>Дата смерти: </td>
+            <td class="text-right">Дата смерти: </td>
             <td><input asp-for="Citizen.DateOfDeath" placeholder="@Model.Citizen.DateOfDeath " /></td>
         </tr>
     </table>
+    <hr />
+    
 
-    <div class="row">
+    <div class="row text-center">
         <div class="col">
             <button type="submit" class="btn btn-success ">Update</button>
             <a asp-page="index" class="btn btn-danger ">Cancel</a>
@@ -77,4 +78,4 @@
 
 
 
-@*</form>*@
+</form>

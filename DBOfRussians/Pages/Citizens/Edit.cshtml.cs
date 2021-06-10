@@ -21,10 +21,12 @@ namespace DBOfRussians.Pages.Citizens
             
 
         }
-        public Citizen Citizen { get; set; } 
+        public Citizen Citizen { get; set; }
 
         public void OnGet(int id)
         {
+            
+
             Citizen = _citizenRepository.GetCitizen(id);
 
             if (Citizen == null)

@@ -1,0 +1,80 @@
+﻿@page 
+@model DBOfRussians.Pages.Citizens.EditModel
+@{
+    ViewData["Title"] = "Редактировать";
+
+}
+<h1>Редактировать данные гражданина</h1>
+
+
+
+
+<div class="row">
+    <h4>
+        <label>Введите id гражданина:    </label>
+    </h4>
+    <input asp-for="Citizen.Id " />
+
+    <button class="btn btn-success">Выбрать</button>
+
+
+</div>
+
+    <table class="table td">
+
+
+        <tr>
+            <td>Id: </td>
+            <td><input asp-for="Citizen.Id" placeholder="@Model.Citizen.Id "/></td>
+        </tr>
+
+        <tr>
+            <td>Имя: </td>
+            <td><input asp-for="Citizen.Name" placeholder="@Model.Citizen.Name " /></td>
+        </tr>
+
+        <tr>
+            <td>Фамилия: </td>
+            <td><input asp-for="Citizen.Surnames" placeholder="@Model.Citizen.Surnames " /></td>
+        </tr>
+
+        <tr>
+
+            <td>Отчество: </td>
+            <td><input asp-for="Citizen.Patronymic" placeholder="@Model.Citizen.Patronymic " /></td>
+        </tr>
+
+        <tr>
+
+            <td>СНИЛС: </td>
+            <td><input asp-for="Citizen.SNILS" placeholder="@Model.Citizen.SNILS " /></td>
+        </tr>
+
+        <tr>
+
+            <td>ИНН: </td>
+            <td><input asp-for="Citizen.INN" placeholder="@Model.Citizen.INN " /></td>
+        </tr>
+
+        <tr>
+            <td>Дата рождения: </td>
+            <td><input asp-for="Citizen.DateOfBirth" placeholder="@Model.Citizen.DateOfBirth " /></td>
+        </tr>
+
+        <tr>
+            <td>Дата смерти: </td>
+            <td><input asp-for="Citizen.DateOfDeath" placeholder="@Model.Citizen.DateOfDeath " /></td>
+        </tr>
+    </table>
+
+    <div class="row">
+        <div class="col">
+            <button type="submit" class="btn btn-success ">Update</button>
+            <a asp-page="index" class="btn btn-danger ">Cancel</a>
+        </div>
+    </div>
+
+
+
+
+@*</form>*@

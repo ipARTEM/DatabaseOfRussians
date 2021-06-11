@@ -16,34 +16,47 @@ namespace DBOfRussians.Pages.Citizens
         public EditModel(ICitizenRepository citizenRepository)
         {
             _citizenRepository = citizenRepository;
-
-
-            
-
         }
+
+        [BindProperty]
         public Citizen Citizen { get; set; }
 
-        public void OnGet(int id)
+        public IActionResult OnGet(int? id)
         {
-            
+            if (id.HasValue)
+                Citizen = _citizenRepository.GetCitizen(id.Value);
 
-            Citizen = _citizenRepository.GetCitizen(id);
+            else
+                Citizen = new Citizen();
 
             if (Citizen == null)
             {
 
-                Citizen = _citizenRepository.GetCitizen(1);
-
-
+                return RedirectToPage("/NotFound");
             }
+            return Page();
             
 
         }
 
         public IActionResult OnPost(Citizen citizen)
         {
-            Citizen = _citizenRepository.Update(citizen);        
-            return RedirectToPage("Cititzens");
+            if (ModelState.IsValid)
+            {
+                if (Citizen.Id>0)
+                {
+                    Citizen = _citizenRepository.Update(Citizen);
+
+                }
+
+                else
+                {
+                    Citizen = _citizenRepository.Add(Citizen);
+                }
+
+            }
+            
+            return RedirectToPage("Citizens");
         }
     }
 }

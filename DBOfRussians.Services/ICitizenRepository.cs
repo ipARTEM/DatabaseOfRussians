@@ -12,5 +12,7 @@ namespace DBOfRussians.Services
         Citizen GetCitizen(int id);
 
         Citizen Update(Citizen updateCitizen);
+
+        Citizen Add(Citizen newCitizen);
     }
 }

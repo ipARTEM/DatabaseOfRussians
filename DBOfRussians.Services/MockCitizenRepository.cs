@@ -39,6 +39,14 @@ namespace DBOfRussians.Services
             };
         }
 
+        public Citizen Add(Citizen newCitizen)
+        {
+            newCitizen.Id = _citizenList.Max(x => x.Id) + 1;
+            _citizenList.Add(newCitizen);
+            return newCitizen;
+
+        }
+
         public IEnumerable<Citizen> GetAllCitizen()
         {
             return _citizenList;

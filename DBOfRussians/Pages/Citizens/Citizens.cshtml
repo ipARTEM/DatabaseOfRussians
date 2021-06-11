@@ -20,19 +20,27 @@
         <td>ИНН </td>
         <td>Дата рождения </td>
         <td>Дата смерти </td>
+        <td></td>
+        <td></td>
     </tr>
     @foreach (var item in Model.Citizens)
     {
-        <tr>
-            <td>@item.Id</td>
-            <td>@item.Name</td>
-            <td>@item.Surnames</td>
-            <td>@item.Patronymic</td>
-            <td>@item.SNILS</td>
-            <td>@item.INN</td>
-            <td>@item.DateOfBirth</td>
-            <td>@item.DateOfDeath</td>
-        </tr>
+<tr>
+    <td>@item.Id</td>
+    <td>@item.Name</td>
+    <td>@item.Surnames</td>
+    <td>@item.Patronymic</td>
+    <td>@item.SNILS</td>
+    <td>@item.INN</td>
+    <td>@item.DateOfBirth</td>
+    <td>@item.DateOfDeath</td>
+
+    <td>
+        <a asp-page="/Citizens/Edit" asp-route-Id="@item.Id" class="btn btn-primary m-1 ">Edit</a>
+    </td>
+    <td><a asp-page="/Citizens/Delete" asp-route-Id="@item.Id" class="btn btn-danger m-1 ">Delete</a>
+    </td>
+</tr>
 
     }
 

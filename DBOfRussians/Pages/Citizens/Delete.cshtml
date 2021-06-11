@@ -1,0 +1,42 @@
+﻿@page "{id}"
+@model DBOfRussians.Pages.Citizens.DeleteModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 class="text-center">Подтверждение удаления</h1>
+
+<div class="alert alert-danger">
+
+    <div class="row">
+        <div class="col-12 col-md-6 col-xl-4 offset-sm-0 offset-md-3 offset-xl-4">
+            <div class="text-center text-secondary">
+                <h4> ID: <span class="text-primary">@Model.Citizen.Id</span></h4><hr />
+                <h4>Имя: <span class="text-primary">@Model.Citizen.Name</span></h4><hr />
+                <h4>Фамилия: <span class="text-primary">@Model.Citizen.Surnames</span></h4><hr />
+                <h4>Отчество: <span class="text-primary">@Model.Citizen.Patronymic</span></h4><hr />
+                <h4>СНИЛС: <span class="text-primary">@Model.Citizen.SNILS</span></h4><hr />
+                <h4>ИНН: <span class="text-primary">@Model.Citizen.INN</span></h4><hr />
+                <h4>Дата рождения: <span class="text-primary">@Model.Citizen.DateOfBirth</span></h4><hr />
+                <h4>Дата смерти: <span class="text-primary">@Model.Citizen.DateOfDeath</span></h4><hr />
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col text-center">
+            <h5>Are you shure want to delete employee- @Model.Citizen.Name?</h5>
+
+            <form method="post">
+                <button type="submit" class="btn btn-danger">Yes</button>
+                <a class="btn btn-success" asp-page="/Citizens/Citizens">No</a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+

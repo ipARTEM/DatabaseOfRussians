@@ -47,6 +47,16 @@ namespace DBOfRussians.Services
 
         }
 
+        public Citizen Delete(int id)
+        {
+            Citizen citizenToDelete = _citizenList.FirstOrDefault(x => x.Id == id);
+
+            if (citizenToDelete != null)
+                _citizenList.Remove(citizenToDelete);
+
+            return citizenToDelete;
+        }
+
         public IEnumerable<Citizen> GetAllCitizen()
         {
             return _citizenList;

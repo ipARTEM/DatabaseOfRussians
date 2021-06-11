@@ -39,20 +39,23 @@ namespace DBOfRussians.Pages.Citizens
 
         }
 
-        public IActionResult OnPost(Citizen citizen)
+        public IActionResult OnPost()
         {
+
+            Citizen = _citizenRepository.Update(Citizen);
             if (ModelState.IsValid)
             {
-                if (Citizen.Id>0)
-                {
-                    Citizen = _citizenRepository.Update(Citizen);
+                
+                //if (Citizen.Id>0)
+                //{
+                    
 
-                }
+                //}
 
-                else
-                {
-                    Citizen = _citizenRepository.Add(Citizen);
-                }
+                //else
+                //{
+                //    Citizen = _citizenRepository.Add(Citizen);
+                //}
 
             }
             

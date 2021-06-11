@@ -14,5 +14,7 @@ namespace DBOfRussians.Services
         Citizen Update(Citizen updateCitizen);
 
         Citizen Add(Citizen newCitizen);
+
+        Citizen Delete(int id);
     }
 }

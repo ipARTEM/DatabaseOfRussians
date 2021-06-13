@@ -1,12 +1,10 @@
-﻿@page 
-@model DBOfRussians.Pages.Citizens.EditModel
+﻿@page
+@model DBOfRussians.Pages.Citizens.AddModel
 @{
-    
-
-    ViewData["Title"] = "Edit";
-
+    ViewData["Title"] = "Add";
 }
-<h1 class="text-center" >Редактирование данных гражданина</h1>
+
+<h1 class="text-center">Редактирование данных гражданина</h1>
 <form method="post" asp-page-handler="OnPost" class="mt-3" enctype="multipart/form-data">
 
     <table class="table td">
@@ -56,11 +54,11 @@
         </tr>
     </table>
     <hr />
-    
+
 
     <div class="row text-center">
         <div class="col">
-            <button type="submit" class="btn btn-success ">Update</button>
+            <button type="submit" class="btn btn-success ">Add</button>
             <a class="btn btn-danger" asp-page="/Citizens/Citizens">Cancel</a>
         </div>
     </div>
@@ -69,3 +67,4 @@
 
 
 </form>
+

@@ -21,13 +21,13 @@ namespace DBOfRussians.Pages.Citizens
         [BindProperty]
         public Citizen Citizen { get; set; }
 
-        public IActionResult OnGet(int? id)
+        public IActionResult OnGet(int id)
         {
-            if (id.HasValue)
-                Citizen = _citizenRepository.GetCitizen(id.Value);
+            //if (id != 0)
+                Citizen = _citizenRepository.GetCitizen(id);
 
-            else
-                Citizen = new Citizen();
+            //else
+            //    Citizen = new Citizen();
 
             if (Citizen == null)
             {
@@ -42,20 +42,13 @@ namespace DBOfRussians.Pages.Citizens
         public IActionResult OnPost()
         {
 
-            Citizen = _citizenRepository.Update(Citizen);
+            
             if (ModelState.IsValid)
             {
                 
-                //if (Citizen.Id>0)
-                //{
-                    
 
-                //}
+                Citizen = _citizenRepository.Update(Citizen);
 
-                //else
-                //{
-                //    Citizen = _citizenRepository.Add(Citizen);
-                //}
 
             }
             

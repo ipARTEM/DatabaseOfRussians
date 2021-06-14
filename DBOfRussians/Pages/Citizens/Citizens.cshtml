@@ -7,42 +7,56 @@
 
 <h1 class="text-center">База данных</h1>
 
+<form method="get" class="mb-3 ">
+    <div class="input-group">
+        <input class="form-control" asp-for="SearchCit" />
+        <div class="input-group-append">
+            <button type="submit" class="bth btn-primary">Search</button>
+        </div>
+
+    </div>
+
+</form>
+
 <h3>Количество записей в базе данных: @Model.Citizens.Count()</h3>
 
-<table class="table td">
+<table class="table table-hover rounded-pill ">
 
-    <tr style="font-weight:bold;">
-        <td>Номер </td>
-        <td>Имя </td>
-        <td>Фамилия </td>
-        <td>Отчество </td>
-        <td>СНИЛС </td>
-        <td>ИНН </td>
-        <td>Дата рождения </td>
-        <td>Дата смерти </td>
-        <td></td>
-        <td></td>
-    </tr>
-    @foreach (var item in Model.Citizens)
-    {
-<tr>
-    <td>@item.Id</td>
-    <td>@item.Name</td>
-    <td>@item.Surnames</td>
-    <td>@item.Patronymic</td>
-    <td>@item.SNILS</td>
-    <td>@item.INN</td>
-    <td>@item.DateOfBirth</td>
-    <td>@item.DateOfDeath</td>
+    <thead class="thead-light">
+        <tr>
+            <th>Номер </th>
+            <th>Имя </th>
+            <th>Фамилия </th>
+            <th>Отчество </th>
+            <th>СНИЛС </th>
+            <th>ИНН </th>
+            <th>Дата рождения </th>
+            <th>Дата смерти </th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+        @foreach (var item in Model.Citizens)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Surnames</td>
+                <td>@item.Patronymic</td>
+                <td>@item.SNILS</td>
+                <td>@item.INN</td>
+                <td>@item.DateOfBirth</td>
+                <td>@item.DateOfDeath</td>
 
-    <td>
-        <a asp-page="/Citizens/Edit" asp-route-Id="@item.Id" class="btn btn-primary m-1 ">Edit</a>
-    </td>
-    <td><a asp-page="/Citizens/Delete" asp-route-Id="@item.Id" class="btn btn-danger m-1 ">Delete</a>
-    </td>
-</tr>
+                <td>
+                    <a asp-page="/Citizens/Edit" asp-route-Id="@item.Id" class="btn btn-primary m-1 ">Edit</a>
+                </td>
+                <td>
+                    <a asp-page="/Citizens/Delete" asp-route-Id="@item.Id" class="btn btn-danger m-1 ">Delete</a>
+                </td>
+            </tr>
 
-    }
+        }
 
 </table>
 <hr />

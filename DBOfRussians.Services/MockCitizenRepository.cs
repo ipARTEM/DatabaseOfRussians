@@ -67,6 +67,15 @@ namespace DBOfRussians.Services
             return _citizenList.FirstOrDefault(x => x.Id == id);
         }
 
+        public IEnumerable<Citizen> Search(string searchCit)
+        {
+            if (string.IsNullOrWhiteSpace(searchCit))
+                return _citizenList;
+
+            return _citizenList.Where(x => x.Name.ToLower().Contains(searchCit.ToLower()) || x.Patronymic.ToLower().Contains(searchCit.ToLower()));
+          
+        }
+
         public Citizen Update(Citizen updateCitizen)
         {
             Citizen citizen = _citizenList.FirstOrDefault(x => x.Id == updateCitizen.Id);

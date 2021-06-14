@@ -7,6 +7,8 @@ namespace DBOfRussians.Services
 {
     public interface ICitizenRepository
     {
+        IEnumerable<Citizen> Search(string searchCit);
+
         IEnumerable<Citizen> GetAllCitizen();
 
         Citizen GetCitizen(int id);

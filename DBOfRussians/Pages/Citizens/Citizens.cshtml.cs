@@ -16,14 +16,17 @@ namespace DBOfRussians.Pages.Citizens
         public CitizensModel(ICitizenRepository db)
         {
             _db = db;
-
-
         }
         public IEnumerable<Citizen> Citizens { get; set; }
 
+        [BindProperty(SupportsGet =true)]
+        public string SearchCit { get; set; }
+
         public void OnGet()
         {
-            Citizens = _db.GetAllCitizen();
+            //Citizens = _db.GetAllCitizen();
+
+            Citizens = _db.Search(SearchCit);
         }
     }
 }

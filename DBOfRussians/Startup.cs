@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,7 +26,15 @@ namespace DBOfRussians
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<ICitizenRepository, MockCitizenRepository>();
+            services.AddDbContextPool<AppDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("CitizenDBConnection"));
+            });
+
+
+            services.AddScoped<ICitizenRepository, SQLCitizenRepository>();
+
+            //services.AddSingleton<ICitizenRepository, MockCitizenRepository>();
             services.AddRazorPages();
 
             services.Configure<RouteOptions>(options =>

@@ -24,7 +24,7 @@ namespace DBOfRussians.Pages.Citizens
 
        
 
-        public IActionResult OnGet()
+        public IActionResult OnGet(int id)
         {
             Citizen = new Citizen();
 
